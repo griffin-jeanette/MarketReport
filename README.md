@@ -6,7 +6,7 @@ For each stock, a graph modelling the price movement for the day and the volume 
 Additionally, a selection of key statistics -- Open, Close, Volume, 52-Week High,
 Market Cap -- will be included as well when applicable.
 
-Below is an example of a generated report:
+Below is an example of a selection from a generated report:
 
 ![Example Report1](StockMarketReport-5.png)
 ![Example Report2](StockMarketReport-6.png)
