@@ -8,5 +8,5 @@ Market Cap -- will be included as well when applicable.
 
 Below is an example of a generated report:
 
-![Example Report1](StockMarketReport-5)
-![Example Report2](StockMarketReport-6)
+![Example Report1](StockMarketReport-5.png)
+![Example Report2](StockMarketReport-6.png)
