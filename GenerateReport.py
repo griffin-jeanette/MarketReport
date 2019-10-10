@@ -2,6 +2,8 @@
 
 from datetime import datetime
 import os
+import sys
+import comtypes.client
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -184,13 +186,22 @@ def createDoc(tickers, T):
 
     document.save("Report.docx")
 
+    '''
+    in_file = os.path.abspath("Report.docx")
+    out_File = os.path.abspath("Report.pdf")
+
+    word = comtypes.client.CreateObject('Word.Application')
+    doc = word.Documents.Open(in_file)
+    doc.SaveAs("Report.pdf", FileFormat = wdFormatPDF)
+    doc.Close()
+    word.Quit()
+    '''
     return
 
 def main():
 
-    tickers = ["^DJI", "^GSPC", "AAPL", "MSFT", "FB", "GOOG", "INTC",
-               "QQQ", "BRK-A", "TSLA"]
-    #tickers = ["^DJI", "AAPL"]
+    tickers = ["^DJI", "^GSPC", "AAPL", "MSFT"]
+
     T = StockData.createImages(tickers)
 
     createDoc(tickers, T)
